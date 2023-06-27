@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+# This script is designed to be run inside the container
+#
+
+# fail hard and fast even on pipelines
+
+
+export ROCKET_ADDRESS=0.0.0.0
+export ROCKET_PORT=$PORT
+export ROCKET_KEEP_ALIVE=0
+./target/release/rust-getting-started
